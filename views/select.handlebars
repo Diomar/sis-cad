@@ -1,0 +1,43 @@
+{{!-- <form name="form1" action="controllerForm" method="post">
+        <input type="text" name="id" id="id" placeholder="Id: "><br>
+        <input type="text" name="name" id="name" placeholder="Name: "><br>
+        <input type="text" name="idade" id="idade" placeholder="Idade: "><br>
+        <input type="submit" name="btnSubmit" id="btnSubmit" value="Cadastrar"><br>
+</form> --}}
+
+
+<table>
+    <tr>
+        
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Cpf</th>
+        <th>Sexo</th>
+        <th>Dt. Nascimento</th>
+        <th>Email</th>
+        <th>Telefone</th>
+
+        <th>Ação</th>
+    </tr>
+
+    {{#data}}
+    <tr>
+       
+        <td>{{{id}}}</td>
+        <td>{{{nome_aluno}}}</td>
+        <td>{{{cpf_aluno}}}</td>
+        <td>{{{sexo}}}</td>
+        <td>{{{dt_nasc_aluno}}}</td>
+        <td>{{{tel_aluno}}}</td>
+        <td>{{{email_aluno}}}</td>
+
+         <td>
+            <a href="update/{{id}}"><img src="/img/edite.png"></a>
+            <a href="del/{{id}}" class="del"><img src="/img/lixeira.png"></a>
+        </td>
+    </tr>
+    {{/data}}
+
+</table>
+
+

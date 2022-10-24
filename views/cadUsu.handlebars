@@ -1,0 +1,189 @@
+{{!--------------------------------------------------------
+--SIDEBAR 
+---------------------------------------------------------}}
+  <div class="sidebar">
+    <div class="logo__content">
+      <div class="logo">
+        <i class='bx bxl-c-plus-plus'></i>
+        <div class="logo__name">Logo</div>
+      </div>
+      <i class='bx bx-menu' id='icon-logo'></i>
+    </div>
+    <ul class="nav__list">
+
+      <li>
+        <a href="home">
+          <i class='bx bx-home-alt-2'></i>
+          <span class="links__name">Home</span>
+        </a>
+        <span class="tooltip">Home</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-user'></i>
+          <span class="links__name">Cad. Usuário</span>
+        </a>
+        <span class="tooltip">Cad. Usuário</span>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class='bx bx-pie-chart-alt-2'></i>
+          <span class="links__name">Análises</span>
+        </a>
+        <span class="tooltip">Análises</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-folder'></i>
+          <span class="links__name">Gerenciador</span>
+        </a>
+        <span class="tooltip">Gerenciador</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span class="links__name">Setting</span>
+        </a>
+        <span class="tooltip">Setting</span>
+      </li>
+    </ul>
+
+{{!--------------------------------------------------------
+-- BUTTON SAIR
+---------------------------------------------------------}}
+    <div class="profile__content">
+      <div class="profile">
+        <i class='bx bx-log-out' id="log__out"></i>
+      </div>
+    </div>
+  </div>
+
+{{!--------------------------------------------------------
+-- HEADER
+---------------------------------------------------------}}
+  <header class="header__container">
+    <div class="navbar">
+      <h1 id="title">Cadastrar Usuários</h1>
+    </div>
+  </header>
+
+{{!--------------------------------------------------------
+-- CADASTRO DE USUÁRIO
+---------------------------------------------------------}}
+  <section class="cad__usuario-contentainer">
+
+    <div class="cad__usuario-content">
+      <!-- Dados Pessoais -->
+      
+      <div class="cad__usuario-dados-pessoais">
+        <h2>Dados pessoais</h2>
+        
+        <form name="form1" action="cadUsu" class="dados__pessoais" method="post">
+          <label class="pure-material-textfield-outlined">
+            <input type="text" id="nome_aluno" name="nome_aluno" required placeholder=" ">
+            <span>Digite o Nome</span>
+          </label>
+
+          <label class="pure-material-textfield-outlined">
+            <input type="text" id="id" name="id" placeholder=" ">
+            <span>ID</span>
+          </label>
+
+           <label class="pure-material-textfield-outlined">
+            <input type="text" id="sexo" name="sexo" placeholder=" ">
+            <span>Sexo</span>
+          </label>
+
+          <label class="pure-material-textfield-outlined">
+            <input type="text" id="cpf_aluno" name="cpf_aluno" placeholder=" " maxlength="11" minlength="11" required>
+            <span>Cpf</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input type="date" id="dt_nasc_aluno" name="dt_nasc_aluno" required placeholder=" ">
+            <span>Dt. Nascimento</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input type="email" id="email_aluno" name="email_aluno" placeholder=" ">
+            <span>Email</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input type="tel" id="tel_aluno" name="tel_aluno" required placeholder=" ">
+            <span>Telefone</span>
+          </label>
+        <input class="btnSubmit" type="submit" name="btnSubmit" id="btnSubmit" value="Cadastrar"></input>
+
+        </form>
+      </div>
+
+      <!-- Dados de Endereço -->
+      {{!-- <div class="cad__usuario-dados-endereco">
+        <h2>Endereço</h2>
+        <form action="" class="dados__endereco">
+          <label class="pure-material-textfield-outlined">
+            <input type="text" id="cep" name="cep" placeholder=" " maxlength="8" minlength="8" required />
+            <span>Cep</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input type="text" id="address" name="address" placeholder=" " disabled required data-input />
+            <span>Rua</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input type="text" id="number" name="number" placeholder=" " disabled required data-input />
+            <span>Nº</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input type="text" id="neighborhood" name="neighborhood" placeholder=" " disabled required data-input />
+            <span>Bairro</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input type="text" id="complement" name="complement" placeholder=" " disabled data-input />
+            <span>Complemento</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input type="text" id="city" name="city" placeholder=" " disabled required data-input />
+            <span>Cidade</span>
+          </label>
+          <select id="region" disabled required data-input>
+            <option selected>Estado</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+          </select>
+        </form>
+      </div> --}}
+
+      
+      
+    </div>
+
+  </section>
+
+  <!-- ===== Footer ====== -->
+  <footer class="footer__container">
+    Sistema Escolar
+  </footer>
